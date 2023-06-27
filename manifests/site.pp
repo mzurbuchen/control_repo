@@ -6,6 +6,7 @@ node default {
   }
 }
 node 'master.puppet.vm' {
+  include role::development_client
   include role::master_server
   file { '/root/README':
     ensure => file,
