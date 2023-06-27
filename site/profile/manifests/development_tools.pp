@@ -1,5 +1,6 @@
 class profile::development_tools {
   package { 'git':
-    ensure => 'installed'
+    ensure => 'installed',
+    provider => 'yum'
   }
 }
