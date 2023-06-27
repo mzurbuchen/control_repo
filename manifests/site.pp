@@ -1,5 +1,5 @@
 node default {
-  file {'/root/README':
+  file { '/root/README':
     ensure => file,
     content => 'It is Tuesday',
     owner => 'root',
@@ -7,6 +7,9 @@ node default {
 }
 node 'master.puppet.vm' {
   include role::master_server
+  file { '/root/README':
+    ensure => file,
+    content => $fqdn,
 }
 node /^web/ {
   include role::app_server
