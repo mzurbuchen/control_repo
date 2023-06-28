@@ -5,4 +5,6 @@ class profile::development_tools {
     # ensure => '1.9.4',
     # provider => 'yum'
   }
+  class { 'rbenv': }
+  rbenv::gem { 'bundler': ruby_version => '2.4.8' }
 }
