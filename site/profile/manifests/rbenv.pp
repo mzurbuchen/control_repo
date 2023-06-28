@@ -5,11 +5,11 @@ class profile::rbenv {
     require  => Package['git'],
   }
 
-  #package { 'ruby-build':
-  #  ensure   => installed,
-  #  provider => 'gem',
-  #  require  => Package['rbenv'],
-  #}
+  # package { 'ruby-build':
+  #   ensure   => installed,
+  #   provider => 'gem',
+  #   require  => Package['rbenv'],
+  # }
 
   file { '/etc/profile.d/rbenv.sh':
     ensure  => present,
