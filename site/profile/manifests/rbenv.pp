@@ -25,4 +25,4 @@ class profile::rbenv {
   }
 }
 
-include rbenv
+include profile::rbenv
