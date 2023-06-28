@@ -24,5 +24,3 @@ class profile::rbenv {
     require     => File['/etc/profile.d/rbenv.sh'],
   }
 }
-
-include profile::rbenv
