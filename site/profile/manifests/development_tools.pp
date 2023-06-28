@@ -5,5 +5,6 @@ class profile::development_tools {
     # ensure => '1.9.4',
     # provider => 'yum'
   }
-  include profile::rbenv_install
+  # include profile::rbenv_install
+  class { 'profile::rbenv_install': }
 }
