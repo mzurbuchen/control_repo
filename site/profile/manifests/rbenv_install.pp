@@ -24,4 +24,4 @@ class profile::rbenv_install {
   }
 }
 
-class { 'profile::rbenv_install': }
+# class { 'profile::rbenv_install': }
