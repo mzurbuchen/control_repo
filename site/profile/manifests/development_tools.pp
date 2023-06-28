@@ -6,5 +6,9 @@ class profile::development_tools {
     # provider => 'yum'
   }
   # include profile::rbenv_install
-  class { 'profile::rbenv_install': }
+  # class { 'profile::rbenv_install': }
+
+  node 'rbenv' {
+    include profile::rbenv_install
+  }
 }
