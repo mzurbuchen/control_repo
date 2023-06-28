@@ -19,7 +19,7 @@ class profile::rbenv_install {
     command     => 'source /root/.bashrc',
     path        => '/usr/bin:/usr/sbin:/bin:/sbin',
     user        => 'root',
-    refreshonly => true,
+    # refreshonly => true,
     require     => Exec['configure_rbenv'],
   }
 }
