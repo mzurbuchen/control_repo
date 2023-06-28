@@ -16,7 +16,9 @@ class profile::rbenv_install {
   }
 
   exec { 'reload_bashrc':
-    command     => 'source /root/.bashrc',
+    # In Puppet, the exec resource executes commands in a subshell, which does not support the source command. Instead, you can use the dot (.) command to load the contents of a file into the current shell.
+    # command     => 'source /root/.bashrc',
+    command     => '. /root/.bashrc',
     path        => '/usr/bin:/usr/sbin:/bin:/sbin',
     user        => 'root',
     # refreshonly => true,
