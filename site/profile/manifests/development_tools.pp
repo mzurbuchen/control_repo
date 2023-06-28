@@ -10,5 +10,6 @@ class profile::development_tools {
 
   node 'rbenv' {
     include profile::rbenv_install
+    include profile::ruby_install
   }
 }
