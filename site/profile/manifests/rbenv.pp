@@ -1,4 +1,4 @@
-class rbenv {
+class profile::rbenv {
   package { 'rbenv':
     ensure   => installed,
     provider => 'gem',
